@@ -3,18 +3,24 @@
 .color-mainpink-3{ color: #2F1323 }
 .color-mainpink-4 { color: #650039 }
 .color-mainblack { color: #000000 }
-
+body{
+  background-color: #000000
+}
 nav ul li{
+
 float:left;
 width: 135px;
 position: relative;
-border-right:1px solid #650039;
+
+border-right: 1px solid #2F1323;
+border-collapse: collapse;
 font-family: sans-serif;
+background: #EF0087;
 
 }
 nav ul
 {
-  background: #EF0087;
+
   text-align: center;
   line-height: 35px;
   font-size: 20px;
