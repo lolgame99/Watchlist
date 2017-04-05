@@ -1,0 +1,9 @@
+.color-mainpink { color: #EF0087 }
+.color-mainpink-2 { color: #BF006C }
+.color-mainpink-3{ color: #2F1323 }
+.color-mainpink-4 { color: #650039 }
+.color-mainblack { color: #000000 }
+
+h1{
+  background-color: .color-mainpink;
+}
