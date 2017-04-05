@@ -1,35 +1,38 @@
-.color-mainpink { color: #EF0087 }
-.color-mainpink-2 { color: #BF006C }
-.color-mainpink-3{ color: #2F1323 }
-.color-mainpink-4 { color: #650039 }
-.color-mainblack { color: #000000 }
+/*Main Colors*/
+:root{
+	--lighter-pink: #EF0087;
+	--main-pink: #BF006C;
+	--darker-pink1: #2F1323;
+	--darker-pink2: #650039;
+	--main-black: #000000;
+}
+
 body{
-  background-color: #000000
+  background-color: var(--main-black);
 }
+
 nav ul li{
+	float:left;
+	width: 135px;
+	position: relative;
 
-float:left;
-width: 135px;
-position: relative;
-
-border-right: 1px solid #2F1323;
-border-collapse: collapse;
-font-family: sans-serif;
-background: #EF0087;
-
-}
-nav ul
-{
-
-  text-align: center;
-  line-height: 35px;
-  font-size: 20px;
-  height: 35px;
-  list-style-type: none;
+	border-right: 1px solid #2F1323;
+	border-collapse: collapse;
+	font-family: sans-serif;
+	background: var(--lighter-pink);
 
 }
+
+nav ul{
+	text-align: center;
+	line-height: 35px;
+	font-size: 20px;
+	height: 35px;
+	list-style-type: none;
+}
+
 nav ul li a{
-color: #000000;
-text-decoration: none;
-cursor: auto;
+	color: var(--main-black);
+	text-decoration: none;
+	cursor: auto;
 }
