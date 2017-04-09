@@ -9,7 +9,6 @@
 }
 body{
 	background-color: var(--main-black);
-
 }
 body #mainpage{
     background-color: var(--main-black);
@@ -18,18 +17,17 @@ body #mainpage{
 	margin-left: auto;
 	margin-right:auto;
     -webkit-text-size-adjust: 100%;
-
 }
+
 .home .col header{
 	display: block;
-
     overflow-x: hidden;
-    border-radius: 3px;
 	background-color: var(--main-pink);
-
 	text-align: center;
-
+    font-family: sans-serif;
+    font-size-adjust: 100%;
 }
+
 
 nav ul li {
     float: left;
@@ -75,31 +73,41 @@ nav {
 	display: block;
     margin-top: 15px;
     overflow-x: hidden;
-    border-radius: 5px;
-	background-color: var(--main-pink);
+
+	background-color: var(--main-black);
 	width: 900px;
 
 }
 .col {
-	    width: 400px;
 
+    background-color:var(--main-pink);
+    width: 400px;
+    border-radius: 5px;
 
 }
 #leftside{
 	max-height: 530px;
     overflow: auto;
-float:left;
-	background-color: #fff;
+    float:left;
 	padding: 0;
     margin: 0;
 	display: block;
 }
+.homesection{
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+
+}
+.homesection p{
+    height:350px;
+}
 #rightside{
+
 	float: right;
 	max-height: 530px;
     overflow: auto;
-
-	background-color: #fff;
 	padding: 0;
     margin: 0;
 	display: block;
