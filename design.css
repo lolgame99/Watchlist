@@ -1,5 +1,4 @@
 /*Main Colors*/
-
 :root {
     --lighter-pink: #EF0087;
     --main-pink: #BF006C;
@@ -7,30 +6,25 @@
     --darker-pink2: #650039;
     --main-black: #000000;
 }
+
 body{
 	background-color: var(--main-black);
+}
+
+#main-banner {
 
 }
-body #mainpage{
+
+/* Main Div*/
+#mainpage{
     background-color: var(--main-black);
-	width:900px;
-	height:100%;
+	width: 1200px;
 	margin-left: auto;
 	margin-right:auto;
     -webkit-text-size-adjust: 100%;
-
-}
-.home .col header{
-	display: block;
-
-    overflow-x: hidden;
-    border-radius: 3px;
-	background-color: var(--main-pink);
-
-	text-align: center;
-
 }
 
+/* Nav Bar */
 nav ul li {
     float: left;
     width: 135px;
@@ -71,36 +65,40 @@ nav {
     margin-right: auto;
     width: 590px;
 }
+
+/* Main List */
 .home{
 	display: block;
-    margin-top: 15px;
+    margin: 15px auto 0 auto;
     overflow-x: hidden;
     border-radius: 5px;
 	background-color: var(--main-pink);
-	width: 900px;
-
+	width: 1200px;
 }
+
 .col {
-	    width: 400px;
-
-
+	width: 550px;
 }
+
+.home .col header{
+	display: block;
+    overflow-x: hidden;
+	background-color: var(--main-pink);
+	text-align: center;
+}
+
 #leftside{
 	max-height: 530px;
     overflow: auto;
-float:left;
+	float:left;
 	background-color: #fff;
-	padding: 0;
-    margin: 0;
 	display: block;
 }
+
 #rightside{
 	float: right;
 	max-height: 530px;
     overflow: auto;
-
 	background-color: #fff;
-	padding: 0;
-    margin: 0;
 	display: block;
 }
