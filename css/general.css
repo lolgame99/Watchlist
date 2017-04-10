@@ -11,17 +11,11 @@ body{
 	background-color: var(--main-black);
 }
 
-#main-banner {
-
-}
-
-/* Main Div*/
-#mainpage{
-    background-color: var(--main-black);
+/* Banner */
+header {
 	width: 1200px;
 	margin-left: auto;
-	margin-right:auto;
-    -webkit-text-size-adjust: 100%;
+	margin-right: auto;
 }
 
 /* Nav Bar */
@@ -67,39 +61,11 @@ nav {
     width: 590px;
 }
 
-/* Main List */
-.home{
-	display: block;
-    margin: 15px auto 0 auto;
-    overflow-x: hidden;
-    border-radius: 5px;
-	background-color: var(--main-pink);
+/* Main Div*/
+main {
+    background-color: var(--main-black);
 	width: 1200px;
-}
-
-.col {
-	width: 550px;
-}
-
-.home .col header{
-	display: block;
-    overflow-x: hidden;
-	background-color: var(--main-pink);
-	text-align: center;
-}
-
-#leftside{
-	max-height: 530px;
-    overflow: auto;
-	float:left;
-	background-color: #fff;
-	display: block;
-}
-
-#rightside{
-	float: right;
-	max-height: 530px;
-    overflow: auto;
-	background-color: #fff;
-	display: block;
+	margin-left: auto;
+	margin-right:auto;
+    -webkit-text-size-adjust: 100%;
 }

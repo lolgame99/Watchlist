@@ -1,0 +1,36 @@
+/* Main List */
+.home{
+	display: block;
+    margin: 15px auto 0 auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+	background-color: var(--main-pink);
+	width: 1200px;
+}
+
+.col {
+	width: 550px;
+}
+
+.home .col .listHeader{
+	display: block;
+    overflow-x: hidden;
+	background-color: var(--main-pink);
+	text-align: center;
+}
+
+#leftside{
+	max-height: 530px;
+    overflow: auto;
+	float:left;
+	background-color: #fff;
+	display: block;
+}
+
+#rightside{
+	float: right;
+	max-height: 530px;
+    overflow: auto;
+	background-color: #fff;
+	display: block;
+}
