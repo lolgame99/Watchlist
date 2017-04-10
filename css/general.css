@@ -13,6 +13,7 @@ body{
 =======
 }
 
+<<<<<<< HEAD:design.css
 #main-banner {
 
 >>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
@@ -39,6 +40,13 @@ body{
 
 
 =======
+=======
+/* Banner */
+header {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+>>>>>>> origin/master:css/general.css
 }
 
 /* Nav Bar */
@@ -65,6 +73,7 @@ nav ul {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
+	padding-left: 20px;
 }
 
 nav ul li a {
@@ -84,6 +93,7 @@ nav {
     width: 590px;
 }
 
+<<<<<<< HEAD:design.css
 /* Main List */
 .home{
 	display: block;
@@ -156,4 +166,13 @@ nav {
 	background-color: #fff;
 >>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
 	display: block;
+=======
+/* Main Div*/
+main {
+    background-color: var(--main-black);
+	width: 1200px;
+	margin-left: auto;
+	margin-right:auto;
+    -webkit-text-size-adjust: 100%;
+>>>>>>> origin/master:css/general.css
 }
