@@ -1,5 +1,4 @@
 /*Main Colors*/
-
 :root {
     --lighter-pink: #EF0087;
     --main-pink: #BF006C;
@@ -7,16 +6,26 @@
     --darker-pink2: #650039;
     --main-black: #000000;
 }
+
 body{
 	background-color: var(--main-black);
+<<<<<<< HEAD
+=======
 }
-body #mainpage{
+
+#main-banner {
+
+>>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
+}
+
+/* Main Div*/
+#mainpage{
     background-color: var(--main-black);
-	width:900px;
-	height:100%;
+	width: 1200px;
 	margin-left: auto;
 	margin-right:auto;
     -webkit-text-size-adjust: 100%;
+<<<<<<< HEAD
 }
 
 .home .col header{
@@ -29,6 +38,11 @@ body #mainpage{
 }
 
 
+=======
+}
+
+/* Nav Bar */
+>>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
 nav ul li {
     float: left;
     width: 135px;
@@ -69,10 +83,13 @@ nav {
     margin-right: auto;
     width: 590px;
 }
+
+/* Main List */
 .home{
 	display: block;
-    margin-top: 15px;
+    margin: 15px auto 0 auto;
     overflow-x: hidden;
+<<<<<<< HEAD
 
 	background-color: var(--main-black);
 	width: 900px;
@@ -83,11 +100,28 @@ nav {
     background-color:var(--main-pink);
     width: 400px;
     border-radius: 5px;
-
+=======
+    border-radius: 5px;
+	background-color: var(--main-pink);
+	width: 1200px;
 }
+
+.col {
+	width: 550px;
+}
+>>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
+
+.home .col header{
+	display: block;
+    overflow-x: hidden;
+	background-color: var(--main-pink);
+	text-align: center;
+}
+
 #leftside{
 	max-height: 530px;
     overflow: auto;
+<<<<<<< HEAD
     float:left;
 	padding: 0;
     margin: 0;
@@ -103,12 +137,23 @@ nav {
 .homesection p{
     height:350px;
 }
+=======
+	float:left;
+	background-color: #fff;
+	display: block;
+}
+
+>>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
 #rightside{
 
 	float: right;
 	max-height: 530px;
     overflow: auto;
+<<<<<<< HEAD
 	padding: 0;
     margin: 0;
+=======
+	background-color: #fff;
+>>>>>>> 18fa834fef6669f9e5e6dff932a8e2ab02972c5e
 	display: block;
 }
