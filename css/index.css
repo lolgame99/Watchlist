@@ -28,9 +28,9 @@
 }
 
 #rightside{
-	float: right;
 	max-height: 530px;
     overflow: auto;
+	float: right;
 	background-color: #fff;
 	display: block;
 }
