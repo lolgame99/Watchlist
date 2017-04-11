@@ -4,6 +4,6 @@
 [Used API](https://api.thetvdb.com/swagger)
 
 #### Notizen
-> Graphic base link: http://thetvdb.com/banners/<type>/<series-id>-<id>.jpg
-<type> = poster, graphical(banner), fanart
-<id> = bei graphical g# sonst # **z.b g31 oder 31**
+> Graphic base link: http://thetvdb.com/banners/*type*/*series-id*-*id*.jpg
+> *type* = poster, graphical(banner), fanart
+> *id* = bei graphical g# sonst # **z.b g31 oder 31**
