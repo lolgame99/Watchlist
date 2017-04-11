@@ -9,18 +9,17 @@
 
 .listHeader{
 	display: block;
-    overflow-x: hidden;
+    overflow: hidden;
 	background-color: var(--main-pink);
 	text-align: center;
 }
 
 .singlePopSeries {
-	float: left;
+	display: inline-block;
 	border: 2px solid var(--main-pink);
-	margin: 15px;
 	border-radius: 5px;
 	overflow: auto;
-	width: 550px;
+	width: 575px;
 }
 
 .poster {
@@ -34,13 +33,24 @@
 	font-size: 30px;
 	text-decoration: underline;
 	margin: 5px;
-	float: left;
 }
 
-.singlePopSeriesTest {
+.singlePopSeriesWide {
 	border: 2px solid var(--main-pink);
 	margin: 15px;
 	border-radius: 5px;
 	overflow: auto;
-	width: 1170px;
+	width: 1166px;
+}
+
+#rightPop {
+	float: right;
+	margin: 15px 0;
+	margin-right: 15px;
+}
+
+#leftPop {
+	float: left;
+	margin: 15px 0;
+	margin-left: 15px;
 }
