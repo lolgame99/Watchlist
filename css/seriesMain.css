@@ -1,4 +1,4 @@
-.popularSeries {
+.popularSeries, .searchedSeries {
 	display: block;
     margin: 15px auto 15px auto;
     overflow-x: hidden;
@@ -54,4 +54,35 @@
 	float: left;
 	margin: 15px 0;
 	margin-left: 15px;
+}
+
+.searchedSeriesList table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+.searchedEntry {
+	margin: 0 120px;
+}
+
+.seriesSearch {
+	margin-bottom: 15px;
+}
+
+#seriesSearchInput {
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-right: 5px;
+	height: 25px;
+}
+
+#seriesSearchButton {
+	border-radius: 5px;
+	border: 2px solid black;
+	height: 30px;
+}
+
+.searchedSeries .listHeader {
+	background: #BF006C;
 }
