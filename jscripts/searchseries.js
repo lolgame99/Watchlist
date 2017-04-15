@@ -1,5 +1,5 @@
 function searchNamesFunction() {
-    // Declare variables
+    // Declare variables 123
     var input, filter, table, tr, td, i;
     input = document.getElementById('seriesSearchInput');
     filter = input.value.toUpperCase();
