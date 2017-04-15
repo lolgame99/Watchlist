@@ -7,13 +7,6 @@
 	width: 1200px;
 }
 
-.listHeader{
-	display: block;
-    overflow: hidden;
-	background-color: var(--main-pink);
-	text-align: center;
-}
-
 .singlePopSeries {
 	display: inline-block;
 	border: 2px solid var(--main-pink);
@@ -81,8 +74,4 @@
 	border-radius: 5px;
 	border: 2px solid black;
 	height: 30px;
-}
-
-.searchedSeries .listHeader {
-	background: #BF006C;
 }

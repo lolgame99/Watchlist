@@ -1,22 +1,10 @@
 /* Main List */
-.home{
-	display: block;
-    margin: 15px auto 0 auto;
-    overflow-x: hidden;
-    border-radius: 5px;
+.content{
 	background-color: var(--main-pink);
-	width: 1200px;
 }
 
 .col {
 	width: 550px;
-}
-
-.home .col .listHeader{
-	display: block;
-    overflow-x: hidden;
-	background-color: var(--main-pink);
-	text-align: center;
 }
 
 #leftside{
@@ -25,6 +13,7 @@
 	float:left;
 	background-color: #fff;
 	display: block;
+	border-radius: 0;
 }
 
 #rightside{
@@ -33,4 +22,5 @@
 	float: right;
 	background-color: #fff;
 	display: block;
+	border-radius: 0;
 }

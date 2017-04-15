@@ -20,7 +20,7 @@ body{
     -webkit-text-size-adjust: 100%;
 }
 
-.home .col .listHeader{
+.listHeader{
 	display: block;
     overflow-x: hidden;
 	background-color: var(--main-pink);
@@ -149,4 +149,13 @@ main {
 	margin-left: auto;
 	margin-right:auto;
     -webkit-text-size-adjust: 100%;
+}
+
+.content {
+	display: block;
+    margin: 15px auto 15px auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+	background-color: white;
+	width: 1200px;
 }
