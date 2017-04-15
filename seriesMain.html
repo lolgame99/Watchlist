@@ -6,6 +6,7 @@
 	<title>Serien Liste</title>
 	<link href="css/general.css" rel="stylesheet" />
 	<link href="css/seriesMain.css" rel="stylesheet" />
+	<script language="javascript" type="text/javascript" src="jscripts/searchseries.js"></script>
 </head>
 
 <body>
@@ -54,43 +55,43 @@
 		<section class="content">
 			<div class="listHeader">
 				<h3 style="max-height:500;">Zuletzt gesuchte Serien</h3>
-				<input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
+				<input type="text" id="seriesSearchInput" onkeyup="searchNamesFunction()" placeholder="Suche" class="seriesSearch">
 				<button type="button" id="seriesSearchButton" class="seriesSearch">Suchen</button>
 			</div>
 			<div class="searchedSeriesList">
-				<table>
+				<table id="seriestable">
 					<tr>
 						<td>
-							<div class="searchedEntry">
+
 								asdasdasdasd
-							</div>
+
 						</td>
 						<td>
-							<div class="searchedEntry">
+
 								asda
-							</div>
+
 						</td>
 						<td>
-							<div class="searchedEntry">
+
 								asdasdasd
-							</div>
+
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<div class="searchedEntry">
-								asdasdasdasd
-							</div>
+
+								d
+
 						</td>
 						<td>
-							<div class="searchedEntry">
+
 								asdasd
-							</div>
+
 						</td>
 						<td>
-							<div class="searchedEntry">
+
 								asdasdasdasdasdasdasd
-							</div>
+
 						</td>
 					</tr>
 
