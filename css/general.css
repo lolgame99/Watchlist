@@ -7,8 +7,12 @@
     --main-black: #000000;
 }
 
+
 body{
 	background-color: var(--main-black);
+    width:1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Main Div*/
@@ -130,7 +134,7 @@ nav {
 	float:left;
 	background-color: #fff;
 	display: block;
-    
+
 }
 
 #rightside{

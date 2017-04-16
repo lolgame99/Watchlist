@@ -5,6 +5,8 @@
     border-radius: 5px;
 	background-color: white;
 	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .singlePopSeries {
@@ -52,7 +54,7 @@
 .searchedSeriesList table {
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;
+	 text-align: left;
 }
 
 .searchedEntry {
@@ -64,10 +66,16 @@
 }
 
 #seriesSearchInput {
-	border: 2px solid black;
+	border: 2px solid var(--main-pink);
 	border-radius: 5px;
 	margin-right: 5px;
-	height: 25px;
+	height: 35px;
+	width:800px;
+	background-image:url("../resources/searchico.png") ;
+	background-position: 4px,4px;
+	padding-left: 40px;
+	font-size: 16px;
+	background-repeat: no-repeat;
 }
 
 #seriesSearchButton {
