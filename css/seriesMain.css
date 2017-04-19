@@ -70,12 +70,16 @@
 	border-radius: 5px;
 	margin-right: 5px;
 	height: 35px;
-	width:800px;
+	width:300px;
 	background-image:url("../resources/searchico.png") ;
 	background-position: 4px,4px;
 	padding-left: 40px;
 	font-size: 16px;
 	background-repeat: no-repeat;
+}
+#seriesSearchInput:focus{
+	width:95%;
+	transition: width .35s ease-in-out;
 }
 
 #seriesSearchButton {
