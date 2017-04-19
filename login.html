@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Watchlist</title>
 	<link href="css/general.css" rel="stylesheet" />
-	<link href="css/search.css" rel="stylesheet" />
+	<link href="css/login.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,13 +31,18 @@
 	<main>
 		<section class="content">
 			<div class="listHeader">
-				<h3 style="max-height:500; overflow:auto">Neue Serie suchen</h3>
-				<input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
-				<button type="button" id="seriesSearchButton" class="seriesSearch">Suchen</button>
+				<h3 style="max-height:500; overflow:auto"> Login</h3>
 			</div>
-			<div>
-				test
-			</div>
+			<form class="loginForm" action="index.html" method="post">
+				<h4>Benutzername:</h4>
+				<input type="text" name="username">
+				<h4>Passwort:</h4>
+				<input type="text" name="password">
+				<div class="wrapper">
+					<button type="submit" name="submit">Einloggen</button> <br>
+					<a href="registration.html">Neu Registrieren</a>
+				</div>
+			</form>
 		</section>
 	</main>
 
