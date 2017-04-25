@@ -8,6 +8,7 @@ input {
 }
 
 form {
+    font-family: sans-serif;
 	margin-left: auto;
 	margin-right: auto;
 	width: 210px;
@@ -32,3 +33,68 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+
+    box-sizing: border-box;
+}
+
+.cancelbtn {
+
+    background-color: var(--main-pink);
+}
+.signupbtn {
+
+    background-color: var(--lighter-pink);
+}
+
+.cancelbtn:hover {
+    border: solid black 1px;
+}
+
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+    align-content: center;
+    height: 50px;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.2);
+}
+
+.modal-content {
+
+    border-radius: 5px;
+    background-color: var(--lighter-pink);
+    margin: 5% auto 15% auto;
+    width: 400px;
+    overflow: auto;
+    font-family: sans-serif;
+
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
