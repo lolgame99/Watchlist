@@ -1,10 +1,12 @@
 input {
     border: 2px solid black;
 	border-radius: 5px;
-	margin-right: 5px;
+	
 	height: 25px;
 	width: 200px;
-	margin-bottom: 15px;
+
+
+
 }
 
 form {
@@ -13,7 +15,16 @@ form {
 	margin-right: auto;
 	width: 210px;
 }
+.buttonreg{
 
+float:left;
+
+
+}
+
+.subbut{
+    float:right;
+}
 .content {
 	background-color: var(--lighter-pink);
 	width: 400px;
@@ -30,8 +41,8 @@ button {
 }
 
 .wrapper {
-	margin-left: auto;
-	margin-right: auto;
+
+
 }
 
 input[type=text], input[type=password] {
@@ -59,6 +70,7 @@ input[type=text], input[type=password] {
 .cancelbtn,.signupbtn {
     float: left;
     width: 50%;
+
     align-content: center;
     height: 50px;
 }
