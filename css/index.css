@@ -1,33 +1,28 @@
 /* Main List */
-.content{
-	background-color: var(--main-black);
 
+.content {
+  background-color: var(--main-black);
 }
 
 .col {
-	width: 550px;
-
+  width: 550px;
 }
 
-#leftside{
-	max-height: 530px;
-
-    overflow: auto;
-	float:left;
-	background-color: #fff;
-	display: block;
-	border-radius: 5px;
+#leftside {
+  float: left;
+  background-color: #fff;
+  display: block;
+  border-radius: 5px;
 }
 
-#rightside{
-	max-height: 530px;
-    overflow: auto;
-	float: right;
-	background-color: #fff;
-	display: block;
-	border-radius: 5px;
+#rightside {
+  float: right;
+  background-color: #fff;
+  display: block;
+  border-radius: 5px;
 }
-.col p{
-	margin-left: 10px;
-	margin-right: 10px;
+
+.col p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
