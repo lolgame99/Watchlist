@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Watchlist</title>
+	<link href="css/general.css" rel="stylesheet" />
+	<link href="css/allSeries.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jscripts/searchseries.js"></script>
+</head>
+
+<body>
+	<header>
+		<img id="main-banner" src="resources/main-banner.png" alt="banner">
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="popular.html">Popular</a>
+				</li>
+				<li>
+					<a href="allSeries.html">Alle Serien</a>
+				</li>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;">Zuletzt gesuchte Serien</h3>
+				<input type="text" id="seriesSearchInput" onkeyup="searchNamesFunction()" placeholder="Suche" class="seriesSearch">
+
+			</div>
+			<div class="searchedSeriesList">
+				<table id="seriestable">
+					<tr>
+						<td>
+							<div class ="searchedEntry">
+								asd
+							</div>
+						</td>
+						<td>
+
+							<div class ="searchedEntry">
+								asdasdas
+							</div>
+
+						</td>
+						<td>
+
+							<div class ="searchedEntry">
+								as
+							</div>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+							<div class ="searchedEntry">
+								Benny
+							</div>
+
+						</td>
+						<td>
+
+							<div class ="searchedEntry">
+								Pastafest
+							</div>
+
+						</td>
+						<td>
+
+							<div class ="searchedEntry">
+								Spaghetttiiiiii
+							</div>
+
+						</td>
+					</tr>
+
+				</table>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
