@@ -1,28 +1,34 @@
 /* Main List */
 
 .content {
-  background-color: var(--main-black);
+ 	background-color: var(--main-black);
 }
 
 .col {
-  width: 550px;
+ 	width: 550px;
 }
 
 #leftside {
-  float: left;
-  background-color: #fff;
-  display: block;
-  border-radius: 5px;
+	float: left;
+	background-color: #fff;
+	display: block;
+	border-radius: 5px;
 }
 
 #rightside {
-  float: right;
-  background-color: #fff;
-  display: block;
-  border-radius: 5px;
+	float: right;
+	background-color: #fff;
+	display: block;
+	border-radius: 5px;
 }
 
 .col p {
-  margin-left: 10px;
-  margin-right: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.spacer {
+	border-top: 1px solid black;
+	width: 90%;
+	margin: 15px auto 15px auto;
 }
