@@ -1,52 +1,56 @@
 .popularSeries, .searchedSeries {
-	display: block;
+    display: block;
     margin: 15px auto 15px auto;
     overflow-x: hidden;
     border-radius: 5px;
-	background-color: white;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
+    background-color: white;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .singlePopSeries {
-	display: inline-block;
-	border: 2px solid var(--main-pink);
-	border-radius: 5px;
-	overflow: auto;
-	width: 575px;
+    display: inline-block;
+    border: 2px solid var(--main-pink);
+    border-radius: 5px;
+    overflow: auto;
+    width: 575px;
 }
 
 .poster {
-	height: 300px;
-	width: auto;
-	margin: 5px;
-	float: left;
+    height: 300px;
+    width: auto;
+    margin: 5px;
+    float: left;
 }
 
 .seriesFont {
-	font-size: 30px;
-	text-decoration: underline;
-	margin: 5px;
-	margin-bottom: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 5px;
+    margin-bottom: 20px;
 }
 
 .singlePopSeriesWide {
-	border: 2px solid var(--main-pink);
-	margin: 15px;
-	border-radius: 5px;
-	overflow: auto;
-	width: 1166px;
+    border: 2px solid var(--main-pink);
+    margin: 15px;
+    border-radius: 5px;
+    overflow: auto;
+    width: 1166px;
 }
 
 #rightPop {
-	float: right;
-	margin: 15px 0;
-	margin-right: 15px;
+    float: right;
+    margin: 15px 0;
+    margin-right: 15px;
 }
 
 #leftPop {
-	float: left;
-	margin: 15px 0;
-	margin-left: 15px;
+    float: left;
+    margin: 15px 0;
+    margin-left: 15px;
+}
+
+#synops {
+    margin-top: 30px;
 }
