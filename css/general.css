@@ -9,21 +9,17 @@
 }
 
 body {
-<<<<<<< HEAD
-  background-color: var(--main-black);
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: auto;
-
-  font-family: sans-serif;
-=======
     background-color: var(--main-black);
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
->>>>>>> origin/master
+    font-family: sans-serif;
+    background-color: var(--main-black);
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
 }
 
 
