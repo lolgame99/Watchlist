@@ -38,7 +38,7 @@
 	padding-left: 40px;
 	font-size: 16px;
 	background-repeat: no-repeat;
-	background-size: auto;
+	background-size:auto;
 }
 #seriesSearchInput:focus{
 	width:95%;
