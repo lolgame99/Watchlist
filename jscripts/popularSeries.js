@@ -17,13 +17,13 @@ $(function() {
                 }
                 if (left) {
 
-                    output += "<div class='singlePopSeries' id='leftPop'><img class='poster' src=http://image.tmdb.org/t/p/w342" + obj.poster_path + " alt='poster'>";
-                    output += "<p class='seriesFont'>" + obj.name + "</p>";
+                    output += "<div class='singlePopSeries' id='leftPop'><img class='poster seriesLink' data-id='" + obj.id + "' src=http://image.tmdb.org/t/p/w342" + obj.poster_path + " alt='poster'>";
+                    output += "<p class='seriesFont seriesLink' data-id='" + obj.id + "'>" + obj.name + "</p>";
                     output += "<p id='synops'>" + synopsis + "</p></div>";
                     left = false;
                 } else if (!left) {
-                    output += "<div class='singlePopSeries' id='rightPop'><img class='poster' src=http://image.tmdb.org/t/p/w342" + obj.poster_path + " alt='poster'>";
-                    output += "<p class='seriesFont'>" + obj.name + "</p>";
+                    output += "<div class='singlePopSeries' id='rightPop'><img class='poster seriesLink' data-id='" + obj.id + "' src=http://image.tmdb.org/t/p/w342" + obj.poster_path + " alt='poster'>";
+                    output += "<p class='seriesFont seriesLink' data-id='" + obj.id + "'>" + obj.name + "</p>";
                     output += "<p id='synops'>" + synopsis + "</p></div>";
                     left = true;
                 }

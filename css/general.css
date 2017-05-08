@@ -25,6 +25,12 @@ body {
 
 /* Main Div*/
 
+.seriesLink:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .seriesFont {
     font-size: 30px;
     text-decoration: underline;
