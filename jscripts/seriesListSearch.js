@@ -34,7 +34,14 @@ $(function() {
         }
     });
 
-    $("#seriesSearchInput").keyup(function(event) {
+    $("#seriesSearchInput").keypress(function(event) {
+        if (event.which == 13) {
+            $("#seriestable td.tcol:contains('" + $(this).val() + "')").parent().show();
+            $("#seriestable td.tcol:not(:contains('" + $(this).val() + "'))").parent().hide();
+        }
+    });
+
+    $("#seriesSearchInput").focusout(function(event) {
         $("#seriestable td.tcol:contains('" + $(this).val() + "')").parent().show();
         $("#seriestable td.tcol:not(:contains('" + $(this).val() + "'))").parent().hide();
     });
