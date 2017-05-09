@@ -18,8 +18,7 @@ $(function() {
                 if (number == 1) {
                     number = 2;
                     output += "<tr><td class='tcol'><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
-                }
-                if (number == 2) {
+                } else if (number == 2) {
                     output += "<td class='tcol'><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
                     number = 3;
                 } else {
