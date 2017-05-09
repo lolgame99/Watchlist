@@ -1,59 +1,52 @@
-.wrap{
+.wrap {
     max-height: 2000px;
     overflow: scroll;
-    height:auto;
-    overflow:visible;
-
+    height: auto;
+    overflow: visible;
 }
 
-.poster{
-    width:260px;
-    float:left;
-    margin-top: 17px;
-    margin-left: 17px;
+.poster {
+    width: 260px;
+    float: left;
+    margin: 15px;
 }
 
-.plot{
-    float:left;
-    width:500px;
-
-    height:100%;
-    margin-left:15px;
+.plot {
+    float: left;
+    width: 500px;
+    height: 100%;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
-.infotable table tr td{
-    border:solid 2px var(--main-pink);
+.infotable table tr td {
+    border: solid 2px var(--main-pink);
     border-collapse: collapse;
-    padding:5px;
-    width:165px;
+    padding: 5px;
+    width: 165px;
     text-align: right;
-
 }
 
 .infotable table tr {
-    border:solid 2px var(--main-pink);
+    border: solid 2px var(--main-pink);
     border-collapse: collapse;
-
-
 }
 
-.infotable table{
-
-    border:solid 2px var(--main-pink);
+.infotable table {
+    border: solid 2px var(--main-pink);
     border-collapse: collapse;
-
 }
 
-.infotable{
-    float:right;
-    margin:20px;
+.infotable {
+    float: right;
+    margin: 15px;
     border-collapse: collapse;
     border-radius: 5px;
-    border:solid 2px var(--main-pink);
-    width:auto;
+    border: solid 2px var(--main-pink);
+    width: auto;
 }
 
-.infotable table tr .big{
+.infotable table tr .big {
     font-weight: bold;
     text-align: left;
 }

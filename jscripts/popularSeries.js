@@ -13,7 +13,7 @@ $(function() {
                 test += 1;
                 var synopsis = $.trim(obj.overview).substring(0, 500).split(".").slice(0, -1).join(" ") + "...";
                 if (synopsis == "...") {
-                    synopsis = "Keine Synopsis vorhanden, tut uns leid!";
+                    synopsis = "<i>Keine Synopsis vorhanden, tut uns leid!</i>";
                 }
                 if (left) {
 
