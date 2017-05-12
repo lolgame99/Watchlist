@@ -6,7 +6,7 @@ $(function() {
 
     $.ajax({
         method: "GET",
-        url: "http://localhost:4841/Watchlist_API/api/series/all",
+        url: "http://benni.dyndns.info:4841/Watchlist_API/api/series/all",
         beforeSend: function() {
             $("#seriestable").html("<div class='loader'>Loading...</div>");
         },
