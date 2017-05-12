@@ -6,7 +6,7 @@ $(function() {
 
     $.ajax({
         method: "GET",
-        url: "http://benni.dyndns.info:4841/Watchlist_API/api/series/all",
+        url: "http://localhost:4841/Watchlist_API/api/series/all",
         beforeSend: function() {
             $("#seriestable").html("<div class='loader'>Loading...</div>");
         },
@@ -40,14 +40,33 @@ $(function() {
     });
 
     $("#seriesSearchInput").keypress(function(event) {
-        if (event.which == 13) {
-            $("#seriestable td.tcol:contains('" + $(this).val() + "')").parent().show();
-            $("#seriestable td.tcol:not(:contains('" + $(this).val() + "'))").parent().hide();
-        }
+        var filter = search();
+        console.log(filter);
     });
 
     $("#seriesSearchInput").focusout(function(event) {
-        $("#seriestable td.tcol:contains('" + $(this).val() + "')").parent().show();
-        $("#seriestable td.tcol:not(:contains('" + $(this).val() + "'))").parent().hide();
+        var filter = search();
+        console.log(filter);
     });
 });
+
+function search() {
+    var data = $("#seriesSearchInput").val().split(" ");
+
+    $("#seriestable td.tcol").hide();
+
+    if ($(this).value == "") {
+        $("#seriestable td.tcol").show();
+        return;
+    }
+
+    $("#seriestable td.tcol").filter(function(i, v) {
+        var $t = $(this);
+        for (var d = 0; d < data.length; ++d) {
+            if ($t.text().toLowerCase().indexOf(data[d].toLowerCase()) > -1) {
+                return true;
+            }
+        }
+        return false;
+    }).show();
+}
