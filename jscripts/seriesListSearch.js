@@ -1,4 +1,9 @@
 $(function() {
+    $("body").on('click', '.seriesLink', function(event) {
+        var id = $(this).data('id');
+        window.location.href = "viewSeries.html?id=" + id + "";
+    });
+
     $.ajax({
         method: "GET",
         url: "http://benni.dyndns.info:4841/Watchlist_API/api/series/all",

@@ -1,4 +1,9 @@
 $(function() {
+    $("body").on('click', '.seriesLink', function(event) {
+        var id = $(this).data('id');
+        window.location.href = "viewSeries.html?id=" + id + "";
+    });
+
     $.ajax({
         method: "GET",
         url: "https://api.themoviedb.org/3/tv/airing_today?api_key=02315c61f82284303a120d89ce93baa4&language=de&page=1",
