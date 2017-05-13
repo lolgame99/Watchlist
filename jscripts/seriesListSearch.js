@@ -3,7 +3,7 @@ $(function() {
         var id = $(this).data('id');
         window.location.href = "viewSeries.html?id=" + id + "";
     });
-
+    $("#searchedTable").hide();
     $.ajax({
         method: "GET",
         url: "http://benni.dyndns.info:4841/Watchlist_API/api/series/all",
@@ -40,11 +40,11 @@ $(function() {
     });
 
     $("#seriesSearchInput").keyup(function(event) {
-        search();
+        searchTR();
     });
 });
 
-function search() {
+function searchTR() {
     var data = $("#seriesSearchInput").val().split(" ");
 
     $("#seriestable tr").hide();
@@ -63,11 +63,11 @@ function search() {
             return false;
         }).show();
     }
-    searchOld();
+    searchTD();
 
 }
 
-function searchOld() {
+function searchTD() {
     // Declare variables 123
     var input, filter, table, tr, td, nav, i;
     input = document.getElementById('seriesSearchInput');
@@ -76,38 +76,18 @@ function searchOld() {
     tr = table.getElementsByTagName('tr');
 
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        nav = td.getElementsByClassName("searchedEntry")[0];
-        if (nav) {
-            if (nav.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                nav.style.display = "";
-            } else {
-                nav.style.display = "none";
+    for (var d = 0; d < 3; d++) {
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[d];
+            nav = td.getElementsByClassName("searchedEntry")[0];
+            if (nav) {
+                if (nav.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    nav.style.display = "";
+                } else {
+                    nav.style.display = "none";
+                }
             }
         }
     }
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        nav = td.getElementsByClassName("searchedEntry")[0];
-        if (nav) {
-            if (nav.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                nav.style.display = "";
-            } else {
-                nav.style.display = "none";
-            }
-        }
-    }
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2];
 
-        nav = td.getElementsByClassName("searchedEntry")[0];
-        if (nav) {
-            if (nav.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                nav.style.display = "";
-            } else {
-                nav.style.display = "none";
-            }
-        }
-    }
 }
