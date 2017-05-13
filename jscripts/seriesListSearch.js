@@ -40,7 +40,7 @@ $(function() {
     });
 
     $("#seriesSearchInput").keyup(function(event) {
-        searchOld();
+        search();
     });
 });
 
@@ -63,6 +63,8 @@ function search() {
             return false;
         }).show();
     }
+    searchOld();
+
 }
 
 function searchOld() {
@@ -108,5 +110,4 @@ function searchOld() {
             }
         }
     }
-
 }
