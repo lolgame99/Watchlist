@@ -22,13 +22,13 @@ $(function() {
                 }
                 if (number == 1) {
                     number = 2;
-                    output += "<tr><td class='tcol'><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
+                    output += "<tr><td><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
                 } else if (number == 2) {
-                    output += "<td class='tcol'><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
+                    output += "<td><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td>";
                     number = 3;
                 } else {
                     number = 1;
-                    output += "<td class='tcol'><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td></tr>";
+                    output += "<td><div class='searchedEntry seriesLink' data-id='" + obj.id + "'>" + name + "</div></td></tr>";
                 }
             });
             output += "";
@@ -40,54 +40,60 @@ $(function() {
     });
 
     $("#seriesSearchInput").keyup(function(event) {
-        searchTR();
+
+        $("#seriestable").hide();
+        $("#searchedTable").show();
+        searchTD();
+
+    });
+    $("#seriesSearchInput").blur(function(event) {
+        $("#seriestable").hide();
+        $("#searchedTable").show();
+        searchTD();
     });
 });
 
-function searchTR() {
-    var data = $("#seriesSearchInput").val().split(" ");
-
-    $("#seriestable tr").hide();
-
-    if ($(this).value == "") {
-        $("#seriestable tr").show();
-        return;
-    } else {
-        $("#seriestable tr").filter(function(i, v) {
-            var $t = $(this);
-            for (var d = 0; d < data.length; ++d) {
-                if ($t.text().toLowerCase().indexOf(data[d].toLowerCase()) > -1) {
-                    return true;
-                }
-            }
-            return false;
-        }).show();
-    }
-    searchTD();
-
-}
-
 function searchTD() {
     // Declare variables 123
-    var input, filter, table, tr, td, nav, i;
+    var input, filter, table, tr, td, div, col, html;
     input = document.getElementById('seriesSearchInput');
     filter = input.value.toUpperCase();
     table = document.getElementById("seriestable");
     tr = table.getElementsByTagName('tr');
+    col = 1;
+    html = "";
+
 
     // Loop through all list items, and hide those who don't match the search query
     for (var d = 0; d < 3; d++) {
         for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[d];
-            nav = td.getElementsByClassName("searchedEntry")[0];
-            if (nav) {
-                if (nav.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    nav.style.display = "";
-                } else {
-                    nav.style.display = "none";
+            div = td.getElementsByClassName("searchedEntry")[0];
+            if (div) {
+                if (div.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    if (col == 1) {
+                        html += "<tr><td>";
+                        html += $(div)[0].outerHTML;
+                        html += "</td>";
+                        col = 2;
+                    } else if (col == 2) {
+                        html += "<td>";
+                        html += $(div)[0].outerHTML;
+                        html += "</td>";
+                        col = 3;
+                    } else if (col == 3) {
+                        html += "<td>";
+                        html += $(div)[0].outerHTML;
+                        html += "</td></tr>";
+                        col = 1;
+                    }
                 }
             }
         }
     }
+    if (col != 3) {
+        html += "</tr>";
+    }
+    $("#searchedTable").html(html);
 
 }

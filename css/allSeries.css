@@ -12,10 +12,17 @@
     margin-bottom: 15px;
 }
 
-.searchedSeriesList table {
+table {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    table-layout: fixed;
+}
+
+table td {
+    width: 390px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .searchedEntry {
