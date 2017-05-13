@@ -16,7 +16,7 @@ $(function() {
             var name = "";
             $.each(data.series, function(id, obj) {
                 if (obj.name.length > 35) {
-                    name = $.trim(obj.name).substring(0, 35).split("").slice(0, -1).join("") + "...";
+                    name = $.trim(obj.name).substring(0, 25).split("").slice(0, -1).join("") + "...";
                 } else {
                     name = obj.name;
                 }
@@ -40,33 +40,27 @@ $(function() {
     });
 
     $("#seriesSearchInput").keypress(function(event) {
-        var filter = search();
-        console.log(filter);
-    });
-
-    $("#seriesSearchInput").focusout(function(event) {
-        var filter = search();
-        console.log(filter);
+        search();
     });
 });
 
 function search() {
     var data = $("#seriesSearchInput").val().split(" ");
 
-    $("#seriestable td.tcol").hide();
+    $("#seriestable tr").hide();
 
     if ($(this).value == "") {
-        $("#seriestable td.tcol").show();
+        $("#seriestable tr").show();
         return;
-    }
-
-    $("#seriestable td.tcol").filter(function(i, v) {
-        var $t = $(this);
-        for (var d = 0; d < data.length; ++d) {
-            if ($t.text().toLowerCase().indexOf(data[d].toLowerCase()) > -1) {
-                return true;
+    } else {
+        $("#seriestable tr").filter(function(i, v) {
+            var $t = $(this);
+            for (var d = 0; d < data.length; ++d) {
+                if ($t.text().toLowerCase().indexOf(data[d].toLowerCase()) > -1) {
+                    return true;
+                }
             }
-        }
-        return false;
-    }).show();
+            return false;
+        }).show();
+    }
 }
