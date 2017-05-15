@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Accountansicht</title>
+    <link href="css/general.css" rel="stylesheet" />
+    <link href="css/account.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="jscripts/url.js"></script>
+    <script src="jscripts/general.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="main-banner" src="resources/main-banner.png" alt="banner">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="popular.html">Popular</a>
+                </li>
+                <li>
+                    <a href="allSeries.html">Alle Serien</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="listHeader">
+                <h3 style="max-height:500;" id="accountName"> Account Name</h3>
+                <input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
+            </div>
+
+            <div class="wrap">
+                <div class="accountTable">
+                    <table id="watchingTable" class="tablesorter">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Serienname</th>
+                                <th>Userscore</th>
+                                <th>Staffelprogress</th>
+                                <th>Folgenprogress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Game of Thrones</td>
+                                <td>5/7</td>
+                                <td>6</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
