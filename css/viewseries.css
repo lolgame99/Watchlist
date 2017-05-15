@@ -65,7 +65,7 @@
 #check
 {
   height: 30px;
-  width: 160px;
+  width: 220px;
   background-image:url("../resources/check.ico");
   background-size: 25px;
   background-repeat: no-repeat;
@@ -90,5 +90,6 @@
   font-weight: bold;
   font-size: 16px;
   margin-left: 5px;
+  text-align: center;
 
 }
