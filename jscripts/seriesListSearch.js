@@ -1,8 +1,4 @@
 $(function() {
-    $("body").on('click', '.seriesLink', function(event) {
-        var id = $(this).data('id');
-        window.location.href = "viewSeries.html?id=" + id + "";
-    });
     $("#searchedTable").hide();
     $.ajax({
         method: "GET",
