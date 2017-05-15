@@ -39,7 +39,9 @@
 				<h4>Benutzername:</h4>
 				<input type="text" name="username">
 				<h4>Passwort:</h4>
-				<input type="text" name="password">
+				<input type="password" name="password">
+				<input type="checkbox" id="showHide" onclick="if(password.type=='text')password.type='password'; else password.type='text';" />
+				<label for="showHide" id="showHideLabel">Show Password</label>
 				<div class="wrapper">
 					<button type="submit" name="submit" class="subbut">Einloggen</button>
 					<button type="button" class="buttonreg" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>

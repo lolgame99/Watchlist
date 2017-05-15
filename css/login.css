@@ -1,96 +1,109 @@
-        input {
-        border: 2px solid black;
-        border-radius: 5px;
-        height: 25px;
-        width: 200px;
-    }
+                                      input {
+                                      border: 2px solid black;
+                                      border-radius: 5px;
+                                      height: 25px;
+                                      width: 200px;
+                                    }
 
-    form {
-        font-family: sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        width: 210px;
-    }
+                                    form {
+                                      font-family: sans-serif;
+                                      margin-left: auto;
+                                      margin-right: auto;
+                                      width: 210px;
+                                    }
 
-    .buttonreg {
-        float: left;
-    }
+                                    .buttonreg {
+                                      float: left;
+                                    }
 
-    .subbut {
-        float: right;
-    }
+                                    .subbut {
+                                      float: right;
+                                    }
 
-    .content {
-        background-color: var(--lighter-pink);
-        width: 400px;
-    }
+                                    .content {
+                                      background-color: var(--lighter-pink);
+                                      width: 400px;
+                                    }
 
-    button {
-        border-radius: 5px;
-        border: 2px solid black;
-        height: 30px;
-        width: 100px;
-        margin-bottom: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+                                    #showHide {
+                                      width: 15px;
+                                      height: 15px;
+                                      float: left;
+                                    }
 
-    .wrapper {}
+                                    #showHideLabel {
+                                      float: left;
+                                      padding-left: 2px;
+                                      padding-bottom: 6px;
+                                      font-size: 0.94em;
+                                    }
 
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        box-sizing: border-box;
-    }
+                                    button {
+                                      border-radius: 5px;
+                                      border: 2px solid black;
+                                      height: 30px;
+                                      width: 100px;
+                                      margin-bottom: 15px;
+                                      margin-left: auto;
+                                      margin-right: auto;
+                                    }
 
-    .cancelbtn {
-        background-color: var(--main-pink);
-    }
+                                    .wrapper {}
 
-    .signupbtn {
-        background-color: var(--lighter-pink);
-    }
+                                    input[type=text], input[type=password] {
+                                      width: 100%;
+                                      padding: 12px 2px;
+                                      margin: 8px 0;
+                                      display: inline-block;
+                                      box-sizing: border-box;
+                                    }
 
-    .cancelbtn:hover {
-        border: solid black 1px;
-    }
+                                    .cancelbtn {
+                                      background-color: var(--main-pink);
+                                    }
 
-    .cancelbtn, .signupbtn {
-        float: left;
-        width: 50%;
-        align-content: center;
-        height: 50px;
-    }
+                                    .signupbtn {
+                                      background-color: var(--lighter-pink);
+                                    }
 
-    .container {
-        padding: 16px;
-    }
+                                    .cancelbtn:hover {
+                                      border: solid black 1px;
+                                    }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.2);
-    }
+                                    .cancelbtn, .signupbtn {
+                                      float: left;
+                                      width: 50%;
+                                      align-content: center;
+                                      height: 50px;
+                                    }
 
-    .modal-content {
-        border-radius: 5px;
-        background-color: var(--lighter-pink);
-        margin: 5% auto 15% auto;
-        width: 400px;
-        overflow: auto;
-        font-family: sans-serif;
-    }
+                                    .container {
+                                      padding: 16px;
+                                    }
 
-    @media screen and (max-width: 300px) {
-        .cancelbtn, .signupbtn {
-            width: 100%;
-        }
+                                    .modal {
+                                      display: none;
+                                      position: fixed;
+                                      z-index: 1;
+                                      left: 0;
+                                      top: 0;
+                                      width: 100%;
+                                      height: 100%;
+                                      overflow: auto;
+                                      background-color: rgb(0, 0, 0);
+                                      background-color: rgba(0, 0, 0, 0.2);
+                                    }
+
+                                    .modal-content {
+                                      border-radius: 5px;
+                                      background-color: var(--lighter-pink);
+                                      margin: 5% auto 15% auto;
+                                      width: 400px;
+                                      overflow: auto;
+                                      font-family: sans-serif;
+                                    }
+
+                                    @media screen and (max-width: 300px) {
+                                      .cancelbtn, .signupbtn {
+                                        width: 100%;
+                                      }
