@@ -1,5 +1,5 @@
 $(function() {
-
+    var user = $.url("?u");
     var id = $.url("?id");
     $.ajax({
         method: "GET",
@@ -14,6 +14,8 @@ $(function() {
             if (!plotOut) {
                 plotOut = "<i>Keine Synopsis vorhanden, tut uns leid!</i>";
             }
+            var title = data.name + " - Watchlist";
+            $("title").html(title);
             $(".plotparagraph").html(plotOut);
             $(".name").html(data.name);
             $(".firstAiring").html(data.first_air_date);
