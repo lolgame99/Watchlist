@@ -6,6 +6,7 @@
     --darker-pink1: #2F1323;
     --darker-pink2: #650039;
     --main-black: #000000;
+    
 }
 
 body {
@@ -82,7 +83,7 @@ nav ul {
 nav ul li a {
     color: var(--main-black);
     text-decoration: none;
-    cursor: auto;
+    cursor:auto;
     display: block;
 }
 
