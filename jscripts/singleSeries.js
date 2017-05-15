@@ -1,18 +1,9 @@
 $(function() {
-    var data = {};
 
-    var url = document.location.href,
-        params = url.split('?')[1].split('&'),
-        tmp;
-    for (var i = 0, l = params.length; i < l; i++) {
-        tmp = params[i].split('=');
-        data[tmp[0]] = tmp[1];
-    }
-
-
+    var id = $.url("?id");
     $.ajax({
         method: "GET",
-        url: "https://api.themoviedb.org/3/tv/" + data.id + "?api_key=02315c61f82284303a120d89ce93baa4&language=de",
+        url: "https://api.themoviedb.org/3/tv/" + id + "?api_key=02315c61f82284303a120d89ce93baa4&language=de",
         beforeSend: function() {
             $(".plotparagraph").html("<div class='loader'>Loading...</div>");
         },
