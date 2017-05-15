@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link href="css/general.css" rel="stylesheet" />
 	<link href="css/login.css" rel="stylesheet" />
-
 	<script src="jscripts/closemodal.js"></script>
 </head>
 
@@ -37,18 +37,18 @@
 			</div>
 			<form class="loginForm" action="index.html" method="post">
 				<h4>Benutzername:</h4>
-				<input type="text" name="username">
+				<input type="text" name="username" class="username">
 				<h4>Passwort:</h4>
-				<input type="password" name="password">
-				<input type="checkbox" id="showHide" onclick="if(password.type=='text')password.type='password'; else password.type='text';" />
-				<label for="showHide" id="showHideLabel">Passwort anzeigen</label>
+				<input type="passwort" name="password" class="password">
 				<div class="wrapper">
-					<button type="submit" name="submit" class="subbut">Einloggen</button>
-					<button type="button" class="buttonreg" onclick="document.getElementById('id01').style.display='block'">Registrieren</button>
+					<button type="button" name="submit" class="subbut">Einloggen</button>
+					<button type="button" class="buttonReg" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
 
 				</div>
 			</form>
-
+			<div class="error">
+				Benutzername und/oder Passwort falsch!
+			</div>
 			<div id="id01" class="modal">
 				<form class="modal-content animate" action="/action_page.php">
 					<div class="container">
