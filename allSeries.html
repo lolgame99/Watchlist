@@ -7,7 +7,9 @@
 	<link href="css/general.css" rel="stylesheet" />
 	<link href="css/allSeries.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="jscripts/searchseries.js"></script>
+	<script src="jscripts/url.js"></script>
+	<script src="jscripts/general.js"></script>
+	<script src="jscripts/seriesListSearch.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
 		<section class="content">
 			<div class="listHeader">
 				<h3 style="max-height:500;">Zuletzt gesuchte Serien</h3>
-				<input type="text" id="seriesSearchInput" onkeyup="searchNamesFunction()" placeholder="Suche" class="seriesSearch">
+				<input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
 
 			</div>
 			<div class="searchedSeriesList">
@@ -83,6 +85,9 @@
 
 						</td>
 					</tr>
+
+				</table>
+				<table id="searchedTable">
 
 				</table>
 			</div>

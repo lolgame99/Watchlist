@@ -4,9 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jscripts/url.js"></script>
+	<script src="jscripts/general.js"></script>
 	<link href="css/general.css" rel="stylesheet" />
 	<link href="css/login.css" rel="stylesheet" />
-
 	<script src="jscripts/closemodal.js"></script>
 </head>
 
@@ -37,24 +39,26 @@
 			</div>
 			<form class="loginForm" action="index.html" method="post">
 				<h4>Benutzername:</h4>
-				<input type="text" name="username">
+				<input type="text" name="username" placeholder="Benutzername eingeben" class="username">
 				<h4>Passwort:</h4>
-				<input type="text" name="password">
+				<input type="password" name="password" placeholder="Passwort eingeben" class="password">
 				<div class="wrapper">
-					<button type="submit" name="submit" class="subbut">Einloggen</button>
-					<button type="button" class="buttonreg" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+					<button type="button" name="submit" class="subbut">Einloggen</button>
+					<button type="button" class="buttonReg" onclick="document.getElementById('id01').style.display='block'">Registrieren</button>
 
 				</div>
 			</form>
-
+			<div class="error">
+				Benutzername und/oder Passwort falsch!
+			</div>
 			<div id="id01" class="modal">
 				<form class="modal-content animate" action="/action_page.php">
 					<div class="container">
 						<label><b>Email</b></label>
 						<input type="text" placeholder="Email eingeben" name="email" required>
 
-						<label><b>Username</b></label>
-						<input type="text" placeholder="Username eingeben" name="username" required>
+						<label><b>Benutzername</b></label>
+						<input type="text" placeholder="Benutzername eingeben" name="username" required>
 
 						<label><b>Passwort</b></label>
 						<input type="password" placeholder="Passwort eingeben" name="psw" required>
@@ -62,7 +66,7 @@
 						<label><b>Passwort wiederholen</b></label>
 						<input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
 
-						<p>Bei dem erstellen eines Accounts akzeptieren sie unsere <a href="AGB">AGBs</a>.</p>
+						<p>Bei dem erstellen eines Accounts akzeptieren sie unsere <a href="AGB.html">AGBs</a>.</p>
 
 						<div class="clearfix">
 							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>

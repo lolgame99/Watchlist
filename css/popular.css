@@ -24,13 +24,6 @@
     float: left;
 }
 
-.seriesFont {
-    font-size: 30px;
-    text-decoration: underline;
-    margin: 5px;
-    margin-bottom: 20px;
-}
-
 .singlePopSeriesWide {
     border: 2px solid var(--main-pink);
     margin: 15px;
@@ -49,8 +42,4 @@
     float: left;
     margin: 15px 0;
     margin-left: 15px;
-}
-
-#synops {
-    margin-top: 30px;
 }
