@@ -1,4 +1,5 @@
 $(function() {
+    $(".needAcc").hide();
     var user = $.url("?u");
     if (typeof user != "undefined") {
         $("a").each(function(index, el) {
@@ -6,6 +7,7 @@ $(function() {
         });
         $("a[href ^= 'login.html']").html("Konto");
         $("a[href ^= 'login.html']").attr("href", "account.html?u=" + user);
+        $(".needAcc").show();
     }
 
     $("body").on('click', '.seriesLink', function(event) {
