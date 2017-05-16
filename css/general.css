@@ -6,7 +6,6 @@
     --darker-pink1: #2F1323;
     --darker-pink2: #650039;
     --main-black: #000000;
-    
 }
 
 body {
@@ -23,8 +22,25 @@ body {
     overflow: auto;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 
 /* Main Div*/
+
+.seriesLink:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.seriesFont {
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 5px;
+    margin-bottom: 20px;
+}
 
 #mainpage {
     background-color: var(--main-black);
@@ -83,7 +99,7 @@ nav ul {
 nav ul li a {
     color: var(--main-black);
     text-decoration: none;
-    cursor:auto;
+    cursor: auto;
     display: block;
 }
 
