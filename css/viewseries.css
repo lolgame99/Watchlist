@@ -1,29 +1,29 @@
-.wrap{
+.wrap {
     max-height: 2000px;
     overflow: scroll;
-    height:auto;
-    overflow:visible;
+    height: auto;
+    overflow: visible;
 }
 
-.poster{
-    width:260px;
-    float:left;
-    margin-top: 17px;
-    margin-left: 17px;
+.poster {
+    width: 260px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 
-.plot{
-    float:left;
-    width:500px;
-    height:100%;
-    margin-left:15px;
+.plot {
+    float: left;
+    width: 500px;
+    height: 100%;
+    margin-left: 15px;
 }
 
-.infotable table tr td{
-
+.infotable table tr td {
     border-collapse: collapse;
-    padding:5px;
-    width:165px;
+    padding: 5px;
+    width: 165px;
     text-align: left;
 }
 
@@ -32,64 +32,62 @@
     border-collapse: collapse;
 }
 
-.infotable table{
+.infotable table {
     border-collapse: collapse;
+    margin-bottom: 15px;
 }
 
-.infotable{
-    float:right;
-    margin:20px;
+.infotable {
+    float: right;
+    margin: 20px;
     border-collapse: collapse;
     border-radius: 5px;
-    width:auto;
+    width: auto;
 }
 
-.infotable table tr .big{
+.rating {
+    clear: left;
+    margin-left: 15px;
+}
+
+.big {
     font-weight: bold;
     text-align: left;
 }
 
-#star
-{
-  height: 20px;
-  margin-left: 5px;
-
+.star {
+    height: 20px;
+    margin-left: 5px;
+    margin-bottom: 15px;
 }
 
-#rating
-{
-  margin-left: 5px;
-  font-weight: bold;
+#done {
+    background-image: url("../resources/done.svg");
 }
 
-#check
-{
-  height: 30px;
-  width: 220px;
-  background-image:url("../resources/check.ico");
-  background-size: 25px;
-  background-repeat: no-repeat;
-  border-style: none;
-  background-color: white;
-  background-position: 2.5px,2.5px;
-  font-weight: bold;
-  font-size: 16px;
-  margin-left: 5px;
+#add {
+    background-image: url("../resources/add.svg");
 }
 
-#plus
-{
-  height: 30px;
-  width: 220px;
-  background-image:url("../resources/plus.ico");
-  background-size: 25px;
-  background-repeat: no-repeat;
-  border-style: none;
-  background-color: white;
-  background-position: 2.5px,2.5px;
-  font-weight: bold;
-  font-size: 16px;
-  margin-left: 5px;
-  text-align: center;
+#cancel {
+    background-image: url("../resources/cancel.svg");
+}
 
+#watching {
+    background-image: url("../resources/watching.svg");
+}
+
+.statusButton {
+    height: 30px;
+    width: 220px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    border-style: none;
+    background-color: white;
+    background-position: 2.5px, 2.5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 5px;
+    text-align: left;
+    padding-left: 30px;
 }

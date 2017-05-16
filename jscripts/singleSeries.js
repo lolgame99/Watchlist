@@ -47,6 +47,16 @@ $(function() {
             $(".genres").html(genreOut);
             $(".lastAiring").html(data.last_air_date);
             $(".status").html(data.status);
+            $(".voteCount").append("(" + data.vote_count + "):");
+
+            var averageRating = Math.round(data.vote_average);
+
+            for (var i = 0; i < averageRating; i++) {
+                $(".star_wrapper").append("<img class='star' src='resources/stern_pink.ico' alt='fullStar'>");
+            }
+            for (var i = 0; i < 10 - averageRating; i++) {
+                $(".star_wrapper").append("<img class='star' src='resources/stern_weiss.ico' alt='emptyStar'>");
+            }
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
