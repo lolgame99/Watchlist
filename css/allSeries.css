@@ -1,10 +1,3 @@
-#seriesSearchInput {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-right: 5px;
-    height: 25px;
-}
-
 table {
     margin-left: auto;
     margin-right: auto;
@@ -32,8 +25,8 @@ table td {
     margin-right: 5px;
     height: 35px;
     width: 300px;
-    background-image: url("../resources/searchico.png");
-    background-position: 4px, 4px;
+    background-image: url("../resources/searchico.svg");
+    background-position: -4px, 5px;
     padding-left: 40px;
     font-size: 16px;
     background-repeat: no-repeat;
