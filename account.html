@@ -35,33 +35,45 @@
     <main>
         <section class="content">
             <div class="listHeader">
-                <h3 style="max-height:500;" id="accountName"> Account Name</h3>
+                <h3 style="max-height:500;"> Account Name</h3>
                 <input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
+            </div>
+        </section>
+        <section class="content">
+            <div class="listHeader">
+                <h3 style="max-height:500;"> Am schauen</h3>
             </div>
 
             <div class="wrap">
-                <div class="accountTable">
-                    <table id="watchingTable" class="tablesorter">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Serienname</th>
-                                <th>Userscore</th>
-                                <th>Staffelprogress</th>
-                                <th>Folgenprogress</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Game of Thrones</td>
-                                <td>5/7</td>
-                                <td>6</td>
-                                <td>10</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table id="watchingTable accountTable" class="tablesorter">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Serienname</th>
+                            <th>Userscore</th>
+                            <th>Staffelprogress</th>
+                            <th>Folgenprogress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Game of Thrones</td>
+                            <td>5/7</td>
+                            <td>6</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Doctor Who
+                                <p class="small">Ändern</p>
+                            </td>
+                            <td>7/10</td>
+                            <td>6</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
