@@ -1,7 +1,13 @@
 $(function() {
+    var user = $.url("?u");
     $("body").on('click', '.seriesLink', function(event) {
         var id = $(this).data('id');
-        window.location.href = "viewSeries.html?id=" + id + "";
+
+        if (typeof user == "undefined") {
+            window.location.href = "viewSeries.html?id=" + id + "";
+        } else {
+            window.location.href = "viewSeries.html?id=" + id + "&u=" + user + "";
+        }
     });
 
     $.ajax({

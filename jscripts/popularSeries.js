@@ -8,8 +8,6 @@ $(function() {
         } else {
             window.location.href = "viewSeries.html?id=" + id + "&u=" + user + "";
         }
-
-
     });
 
     $.ajax({
