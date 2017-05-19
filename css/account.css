@@ -12,7 +12,7 @@
     margin-bottom: 15px;
     height: 35px;
     width: 300px;
-    background-image: url("../resources/searchico.png");
+    background-image: url("../resources/searchico.svg");
     background-position: 4px, 4px;
     padding-left: 40px;
     font-size: 16px;
@@ -45,6 +45,11 @@ table {
 td {
     padding: 5px;
     border: 1px solid var(--main-pink);
+}
+
+.seriesLink {
+    float: left;
+    width: auto;
 }
 
 td:nth-child(2) {

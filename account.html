@@ -2,81 +2,170 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Accountansicht</title>
-    <link href="css/general.css" rel="stylesheet" />
-    <link href="css/account.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="jscripts/url.js"></script>
-    <script src="jscripts/general.js"></script>
+	<meta charset="utf-8">
+	<title>Accountansicht</title>
+	<link href="css/general.css" rel="stylesheet" />
+	<link href="css/account.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jscripts/url.js"></script>
+	<script src="jscripts/general.js"></script>
+	<script src="jscripts/accountList.js"></script>
 </head>
 
 <body>
-    <header>
-        <img id="main-banner" src="resources/main-banner.png" alt="banner">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="popular.html">Popular</a>
-                </li>
-                <li>
-                    <a href="allSeries.html">Alle Serien</a>
-                </li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<img id="main-banner" src="resources/main-banner.png" alt="banner">
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="popular.html">Popular</a>
+				</li>
+				<li>
+					<a href="allSeries.html">Alle Serien</a>
+				</li>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 
-    <main>
-        <section class="content">
-            <div class="listHeader">
-                <h3 style="max-height:500;"> Account Name</h3>
-                <input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
-            </div>
-        </section>
-        <section class="content">
-            <div class="listHeader">
-                <h3 style="max-height:500;"> Am schauen</h3>
-            </div>
+	<main>
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;"> Account Name</h3>
+				<input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
+			</div>
+		</section>
 
-            <div class="wrap">
-                <table id="watchingTable accountTable" class="tablesorter">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Serienname</th>
-                            <th>Userscore</th>
-                            <th>Staffelprogress</th>
-                            <th>Folgenprogress</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Game of Thrones</td>
-                            <td>5/7</td>
-                            <td>6</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Doctor Who
-                                <p class="small">Ändern</p>
-                            </td>
-                            <td>7/10</td>
-                            <td>6</td>
-                            <td>15</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;">Am schauen</h3>
+			</div>
+
+			<div class="wrap">
+				<table class="tablesorter">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Serienname</th>
+							<th>Userscore</th>
+							<th>Staffelprogress</th>
+							<th>Folgenprogress</th>
+						</tr>
+					</thead>
+					<tbody id="watchTable">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>- / -</td>
+							<td>- / -</td>
+							<td>- / -</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Doctor Who
+								<p class="small">Ändern</p>
+							</td>
+							<td>7/10</td>
+							<td>6</td>
+							<td>15</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;">Gesehen</h3>
+			</div>
+
+			<div class="wrap">
+				<table class="tablesorter">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Serienname</th>
+							<th>Userscore</th>
+							<th>Staffelprogress</th>
+							<th>Folgenprogress</th>
+						</tr>
+					</thead>
+					<tbody id="finishTable">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>- / -</td>
+							<td>- / -</td>
+							<td>- / -</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;">Abgebrochen</h3>
+			</div>
+
+			<div class="wrap">
+				<table class="tablesorter">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Serienname</th>
+							<th>Userscore</th>
+							<th>Staffelprogress</th>
+							<th>Folgenprogress</th>
+						</tr>
+					</thead>
+					<tbody id="cancelTable">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>- / -</td>
+							<td>- / -</td>
+							<td>- / -</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="listHeader">
+				<h3 style="max-height:500;">Planung</h3>
+			</div>
+
+			<div class="wrap">
+				<table class="tablesorter">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Serienname</th>
+							<th>Userscore</th>
+							<th>Staffelprogress</th>
+							<th>Folgenprogress</th>
+						</tr>
+					</thead>
+					<tbody id="planTable">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>- / -</td>
+							<td>- / -</td>
+							<td>- / -</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
 </body>
 
 </html>
