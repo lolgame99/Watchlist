@@ -48,29 +48,32 @@
 
 				</div>
 			</form>
-			<div class="error">
+			<div class="error logError">
 				Benutzername und/oder Passwort falsch!
 			</div>
 			<div id="id01" class="modal">
 				<form class="modal-content animate" action="/action_page.php">
 					<div class="container">
 						<label><b>Email</b></label>
-						<input type="text" placeholder="Email eingeben" name="email" required>
+						<input type="text" placeholder="Email eingeben" name="email" class="regEmail" required>
 
 						<label><b>Benutzername</b></label>
-						<input type="text" placeholder="Benutzername eingeben" name="username" required>
+						<input type="text" placeholder="Benutzername eingeben" name="username" class="regName" required>
 
 						<label><b>Passwort</b></label>
-						<input type="password" placeholder="Passwort eingeben" name="psw" required>
+						<input type="password" placeholder="Passwort eingeben" name="psw" class="regPassword" required>
 
 						<label><b>Passwort wiederholen</b></label>
-						<input type="password" placeholder="Passwort wiederholen" name="psw-repeat" required>
+						<input type="password" placeholder="Passwort wiederholen" name="psw-repeat" class="regPasswordR" required>
 
 						<p>Bei dem erstellen eines Accounts akzeptieren sie unsere <a href="AGB.html">AGBs</a>.</p>
 
 						<div class="clearfix">
-							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-							<button type="submit" class="signupbtn">Registrieren</button>
+							<button type="button" class="cancelbtn">Cancel</button>
+							<button type="button" class="signupbtn">Registrieren</button>
+						</div>
+						<div class="error regError">
+							Benutzername und/oder Passwort falsch!
 						</div>
 					</div>
 				</form>

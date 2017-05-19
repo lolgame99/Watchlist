@@ -83,7 +83,7 @@ input[type=text], input[type=password] {
 .modal-content {
     border-radius: 5px;
     background-color: var(--lighter-pink);
-    margin: 5% auto 15% auto;
+    margin: 12.5% auto 15% auto;
     width: 400px;
     overflow: auto;
     font-family: sans-serif;
@@ -96,6 +96,7 @@ input[type=text], input[type=password] {
 }
 
 .error {
+    display: none;
     margin: 15px auto;
     width: 300px;
     text-align: center;
