@@ -94,10 +94,3 @@ input[type=text], input[type=password] {
         width: 100%;
     }
 }
-
-.error {
-    display: none;
-    margin: 15px auto;
-    width: 300px;
-    text-align: center;
-}

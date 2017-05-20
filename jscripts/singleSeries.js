@@ -1,6 +1,32 @@
+var user = $.url("?u");
+var id = $.url("?id");
+var status = 0;
+var name = "";
 $(function() {
-    var user = $.url("?u");
-    var id = $.url("?id");
+    loadInfo();
+
+    $("#watching").click(function(event) {
+        status = 1;
+        addListEntry();
+    });
+
+    $("#done").click(function(event) {
+        status = 2;
+        addListEntry();
+    });
+
+    $("#cancel").click(function(event) {
+        status = 3;
+        addListEntry();
+    });
+
+    $("#add").click(function(event) {
+        status = 4;
+        addListEntry();
+    });
+});
+
+function loadInfo() {
     $.ajax({
         method: "GET",
         url: "https://api.themoviedb.org/3/tv/" + id + "?api_key=02315c61f82284303a120d89ce93baa4&language=de",
@@ -15,6 +41,7 @@ $(function() {
                 plotOut = "<i>Keine Synopsis vorhanden, tut uns leid!</i>";
             }
             var title = data.name + " - Watchlist";
+            name = data.name;
             $("title").html(title);
             $(".plotparagraph").html(plotOut);
             $(".name").html(data.name);
@@ -62,4 +89,42 @@ $(function() {
             console.log(textStatus, errorThrown);
         }
     });
-});
+}
+
+function addListEntry() {
+    var double = false;
+    $.ajax({
+        method: "GET",
+        url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/" + user,
+        success: function(data) {
+            $.each(data.listEntry, function(i, obj) {
+                if (obj.seriesid == id) {
+                    $(".error").html("Diese Serie befindet sich bereits in Ihrer Liste");
+                    $(".error").show();
+                    double = true;
+                }
+            });
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });
+
+    if (!double) {
+        $.ajax({
+            method: "POST",
+            url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/add",
+            encoding: "UTF-8",
+            contentType: "application/json;charset=URF-8",
+            data: '{"userkey":"' + user + '","seriesname":"' + name + '","seriesid":"' + id + '","status":"' + status + '"}',
+            success: function(data) {
+                if (data == "Successful") {
+                    window.location.href = "account.html?u=" + user;
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        });
+    }
+}
