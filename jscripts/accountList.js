@@ -1,5 +1,6 @@
 $(function() {
     var user = $.url("?u");
+
     $.ajax({
         method: "GET",
         url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/" + user,
@@ -45,7 +46,7 @@ $(function() {
                 }
 
             });
-
+            $("table").tablesorter();
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);

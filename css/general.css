@@ -272,3 +272,25 @@ loader, .loader:before, .loader:after {
         height: 5em;
     }
 }
+
+
+/*Tablesorter css*/
+
+table.tablesorter thead tr .header {
+    background-image: url(../resources/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../resources/asc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../resources/desc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #efcbe0;
+}
