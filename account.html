@@ -39,6 +39,8 @@
 			<div class="listHeader">
 				<h3 style="max-height:500;"> Account Name</h3>
 				<input type="text" id="seriesSearchInput" placeholder="Suche" class="seriesSearch">
+				<br>
+				<button type="button" class="logout">Abmelden</button>
 			</div>
 		</section>
 
@@ -65,15 +67,6 @@
 							<td>- / -</td>
 							<td>- / -</td>
 							<td>- / -</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Doctor Who
-								<p class="small">Ändern</p>
-							</td>
-							<td>7/10</td>
-							<td>6</td>
-							<td>15</td>
 						</tr>
 					</tbody>
 				</table>
@@ -166,6 +159,36 @@
 				</table>
 			</div>
 		</section>
+		<div id="id01" class="modal">
+			<form class="modal-content animate" action="/action_page.php">
+				<div class="container">
+					<label><b>Score</b></label>
+					<input type="text" placeholder="Score eingeben" name="score" class="chScore">
+
+					<label><b>Staffelprogress</b></label>
+					<input type="text" placeholder="Staffelprogress eingeben" name="seasonp" class="chSeasonp">
+
+					<label><b>Folgenprogress</b></label>
+					<input type="text" placeholder="Folgenprogress eingeben" name="episodep" class="chEpisodep">
+
+					<label><b>Status auswählen</b><br></label>
+					<select name="status" class="chStatus">
+  						<option value="1">Am schauen</option>
+  						<option value="2">Gesehen</option>
+  						<option value="3">Abgebrochen</option>
+  						<option value="4">Planung</option>
+					</select>
+
+					<div class="clearfix">
+						<button type="button" class="cancelbtn">Cancel</button>
+						<button type="button" class="changebtn">Ändern</button>
+					</div>
+					<div class="error">
+						Benutzername und/oder Passwort falsch!
+					</div>
+				</div>
+			</form>
+		</div>
 	</main>
 </body>
 

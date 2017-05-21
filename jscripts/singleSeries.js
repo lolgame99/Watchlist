@@ -104,27 +104,28 @@ function addListEntry() {
                     double = true;
                 }
             });
+            if (!double) {
+                $.ajax({
+                    method: "POST",
+                    url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/add",
+                    encoding: "UTF-8",
+                    contentType: "application/json;charset=URF-8",
+                    data: '{"userkey":"' + user + '","seriesname":"' + name + '","seriesid":"' + id + '","status":"' + status + '"}',
+                    success: function(data) {
+                        if (data == "Successful") {
+                            window.location.href = "account.html?u=" + user;
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(textStatus, errorThrown);
+                    }
+                });
+            }
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
         }
     });
 
-    if (!double) {
-        $.ajax({
-            method: "POST",
-            url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/add",
-            encoding: "UTF-8",
-            contentType: "application/json;charset=URF-8",
-            data: '{"userkey":"' + user + '","seriesname":"' + name + '","seriesid":"' + id + '","status":"' + status + '"}',
-            success: function(data) {
-                if (data == "Successful") {
-                    window.location.href = "account.html?u=" + user;
-                }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(textStatus, errorThrown);
-            }
-        });
-    }
+
 }

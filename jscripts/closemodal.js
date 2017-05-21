@@ -80,32 +80,51 @@ $(function() {
             $(".regError").show();
         } else {
             var passwordR = password1;
-            var double = checkDouble(username, email);
 
-            if (double) {
-                $(".regError").html("Benutzername oder Email bereits verwendet");
-                $(".regError").show();
-            } else {
-                $.ajax({
-                    method: "POST",
-                    url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/register",
-                    contentType: "application/json",
-                    data: '{"key":"' + userkey + '","name":"' + username + '","email":"' + email + '","password":"' + passwordR + '"}',
-                    success: function(data) {
-                        if (data == "Successfull") {
-                            window.location.href = "index.html?u=" + userkey;
-                        } else {
-                            $(".regError").html("Fehlermeldung siehe Konsole");
+            $.ajax({
+                method: "GET",
+                async: false,
+                url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/all",
+                success: function(data) {
+                    var double = false;
+                    $.each(data.user, function(index, el) {
+                        if (username == el.name) {
+                            double = true;
+                            $(".regError").html("Benutzername bereits verwendet");
                             $(".regError").show();
-                            console.log(data);
+                        } else if (email == el.email) {
+                            double = true;
+                            $(".regError").html("Email bereits verwendet");
+                            $(".regError").show();
                         }
+                    });
 
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        console.log(textStatus, errorThrown);
+                    if (!double) {
+                        $.ajax({
+                            method: "POST",
+                            url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/register",
+                            contentType: "application/json",
+                            data: '{"key":"' + userkey + '","name":"' + username + '","email":"' + email + '","password":"' + passwordR + '"}',
+                            success: function(data) {
+                                if (data == "Successfull") {
+                                    window.location.href = "index.html?u=" + userkey;
+                                } else {
+                                    $(".regError").html("Fehlermeldung siehe Konsole");
+                                    $(".regError").show();
+                                    console.log(data);
+                                }
+
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                console.log(textStatus, errorThrown);
+                            }
+                        });
                     }
-                });
-            }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
         }
     });
 
@@ -117,25 +136,4 @@ function clearCloseModal() {
     $(".regEmail").val("");
     $(".regPassword").val("");
     $(".regPasswordR").val("");
-}
-
-function checkDouble(username, email) {
-    $.ajax({
-        method: "GET",
-        url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/all",
-        success: function(data) {
-            $.each(data.user, function(index, el) {
-                if (username == el.name) {
-                    return true;
-                } else if (email == el.email) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log(textStatus, errorThrown);
-        }
-    });
 }
