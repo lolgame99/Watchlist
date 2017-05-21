@@ -1,14 +1,13 @@
 {
-   "entries":[
-       {
-          "head":"Bap, da die Da die da Dap",
-          "date":"7.5.2017",
-          "text":"LOL do i even care "
-       }
-      {
-         "head":"Launch",
-         "date":"27.04.2017",
-         "text":"Herzlich Willkommen auf unserer brandneuen Website ☺<br>Bitte hilf uns diese Seite zu verbessern durch konstruktive Kritik und neue Vorschläge.<br><br>Mit Herzlichen Grüßen<br>Euer Watchlist-Team."
-      }
-   ]
+    "entries": [{
+            "head": "Bap, da die Da die da Dap",
+            "date": "7.5.2017",
+            "text": "LOL do i even care "
+        },
+        {
+            "head": "Launch",
+            "date": "27.04.2017",
+            "text": "Herzlich Willkommen auf unserer brandneuen Website ☺<br>Bitte hilf uns diese Seite zu verbessern durch konstruktive Kritik und neue Vorschläge.<br><br>Mit Herzlichen Grüßen<br>Euer Watchlist-Team."
+        }
+    ]
 }
