@@ -74,6 +74,26 @@ $(function() {
     $(".logout").click(function(event) {
         window.location.href = "index.html";
     });
+
+    $("#seriesSearchInput").keyup(function(event) {
+        var value = $("#seriesSearchInput").val().toUpperCase();
+
+        $("tbody tr").each(function(index) {
+
+            $row = $(this);
+
+            var id = $row.find("td:nth-child(2)").text().toUpperCase();
+
+            if (id.indexOf(value) != 0) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+
+        });
+    });
+
+
 });
 
 function changeSeries(user, series) {
