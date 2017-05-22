@@ -4,7 +4,7 @@ $(function() {
         method: "GET",
         url: "http://benni.dyndns.info:4841/Watchlist_API/api/series/all",
         beforeSend: function() {
-            $("#seriestable").html("<div class='loader'>Loading...</div>");
+            $("#seriestable").html("<div id='floatingCirclesG'><div class='f_circleG' id='frotateG_01'></div><div class='f_circleG' id='frotateG_02'></div><div class='f_circleG' id='frotateG_03'></div><div class='f_circleG' id='frotateG_04'></div><div class='f_circleG' id='frotateG_05'></div><div class='f_circleG' id='frotateG_06'></div><div class='f_circleG' id='frotateG_07'></div><div class='f_circleG' id='frotateG_08'></div></div>");
         },
         success: function(data) {
             var number = 1;

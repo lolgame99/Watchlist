@@ -14,7 +14,7 @@ $(function() {
         method: "GET",
         url: "https://api.themoviedb.org/3/tv/popular?api_key=02315c61f82284303a120d89ce93baa4&language=de",
         beforeSend: function() {
-            $(".wrapper").html("<div class='loader'>Loading...</div>");
+            $(".wrapper").html("<div id='floatingCirclesG'><div class='f_circleG' id='frotateG_01'></div><div class='f_circleG' id='frotateG_02'></div><div class='f_circleG' id='frotateG_03'></div><div class='f_circleG' id='frotateG_04'></div><div class='f_circleG' id='frotateG_05'></div><div class='f_circleG' id='frotateG_06'></div><div class='f_circleG' id='frotateG_07'></div><div class='f_circleG' id='frotateG_08'></div></div>");
         },
         success: function(data) {
             var output = "";
