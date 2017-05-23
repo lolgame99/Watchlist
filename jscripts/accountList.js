@@ -11,12 +11,26 @@ $(function() {
             var cancelIndex = 1;
             var planIndex = 1;
             $.each(data.listEntry, function(id, obj) {
+                var score = obj.score;
+                var seasonp = obj.seasonp;
+                var episodep = obj.episodep;
+
+                if (score == "0") {
+                    score = "-";
+                }
+                if (seasonp == "0") {
+                    seasonp = "-";
+                }
+                if (episodep == "0") {
+                    episodep = "-";
+                }
+
                 if (obj.status == 1) { //Watching
                     output = "";
                     if (watchIndex == 1) {
                         $("#watchTable").html("");
                     }
-                    output += "<tr><td>" + watchIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + obj.score + "</td><td>" + obj.seasonp + "</td><td>" + obj.episodep + "</td></tr>";
+                    output += "<tr><td>" + watchIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + score + "</td><td>" + seasonp + "</td><td>" + episodep + "</td></tr>";
                     watchIndex += 1;
                     $("#watchTable").append(output);
                 } else if (obj.status == 2) { //Finished
@@ -24,7 +38,7 @@ $(function() {
                     if (finishIndex == 1) {
                         $("#finishTable").html("");
                     }
-                    output += "<tr><td>" + finishIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + obj.score + "</td><td>" + obj.seasonp + "</td><td>" + obj.episodep + "</td></tr>";
+                    output += "<tr><td>" + finishIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + score + "</td><td>" + seasonp + "</td><td>" + episodep + "</td></tr>";
                     finishIndex += 1;
                     $("#finishTable").append(output);
                 } else if (obj.status == 3) { //Canceled
@@ -32,7 +46,7 @@ $(function() {
                     if (cancelIndex == 1) {
                         $("#cancelTable").html("");
                     }
-                    output += "<tr><td>" + cancelIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + obj.score + "</td><td>" + obj.seasonp + "</td><td>" + obj.episodep + "</td></tr>";
+                    output += "<tr><td>" + cancelIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + score + "</td><td>" + seasonp + "</td><td>" + episodep + "</td></tr>";
                     cancelIndex += 1;
                     $("#cancelTable").append(output);
                 } else if (obj.status == 4) { //Plan
@@ -40,7 +54,7 @@ $(function() {
                     if (planIndex == 1) {
                         $("#planTable").html("");
                     }
-                    output += "<tr><td>" + planIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + obj.score + "</td><td>" + obj.seasonp + "</td><td>" + obj.episodep + "</td></tr>";
+                    output += "<tr><td>" + planIndex + "</td><td><div class='seriesLink' data-id='" + obj.seriesid + "'>" + obj.seriesname + "</div><p class='small' data-seriesid='" + obj.seriesid + "'>Ändern</p></td><td>" + score + "</td><td>" + seasonp + "</td><td>" + episodep + "</td></tr>";
                     planIndex += 1;
                     $("#planTable").append(output);
                 }

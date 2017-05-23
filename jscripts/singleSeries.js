@@ -97,13 +97,18 @@ function addListEntry() {
         method: "GET",
         url: "http://benni.dyndns.info:4841/Watchlist_API/api/user/list/" + user,
         success: function(data) {
-            $.each(data.listEntry, function(i, obj) {
-                if (obj.seriesid == id) {
-                    $(".error").html("Diese Serie befindet sich bereits in Ihrer Liste");
-                    $(".error").show();
-                    double = true;
-                }
-            });
+            try {
+                $.each(data.listEntry, function(i, obj) {
+                    if (obj.seriesid == id) {
+                        $(".error").html("Diese Serie befindet sich bereits in Ihrer Liste");
+                        $(".error").show();
+                        double = true;
+                    }
+                });
+            } catch (e) {
+                double = false;
+            }
+
             if (!double) {
                 $.ajax({
                     method: "POST",
